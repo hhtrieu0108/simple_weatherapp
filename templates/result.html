@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Weather Information</title>
+</head>
+<body>
+<div class="center-on-page">
+    {% for d in data %}
+        {% if 'weather' in d and d['weather'] %}
+            {% set icon = d['weather'][0]['icon'] %}
+            {% set my_string = "static/img/" + icon + ".png" %}
+            <h1>
+                <img src="{{ my_string }}" class="png" alt="Weather Icon" height="100" width="100">
+            </h1>
+            <h1 class="city-name">Weather in {{ d['name'] }}, {{ d['sys']['country'] }}</h1>
+            <h1 class="weather-condition">Condition: {{ d['weather'][0]['description'] }}</h1>
+            <h1 class="temperature">Temperature: {{ d['main']['temp'] | round | int }} °C</h1>
+            <h1 class="temp-max">Max: {{ d['main']['temp_max'] | round | int }} °C, Min: {{ d['main']['temp_min'] | round | int }} °C</h1>
+            {% if 'sea_level' in d['main'] %}
+                <h1 class="sea-level">Sea Level: {{ d['main']['sea_level'] }} hPa</h1>
+            {% else %}
+                <h1 class="sea-level">Sea Level data not available</h1>
+            {% endif %}
+            <h1 class="wind">Wind: {{ d['wind']['speed'] }} m/s at {{ d['wind']['deg'] }}°</h1>
+        {% else %}
+            <h1 class="no-data-message">No weather data available for {{ d['name'] }}</h1>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Back button to go to the weather selection page -->
+    <form action="{{ url_for('index') }}" method="get">
+        <button type="submit">Back to Weather Selection</button>
+    </form>
+</div>
+</body>
+</html>

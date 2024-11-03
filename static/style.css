@@ -1,0 +1,122 @@
+body {
+  color: #161616;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: #1b263b; /* Deep Blue background color */
+  margin: 0;
+  padding: 0;
+}
+
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+img {
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+/* Custom Select and Button */
+select, button {
+  width: 100%;
+  height: 40px;
+  padding: 0 0.5em;
+  color: #fff;
+  background: #2c3e50;
+  border: none;
+  border-radius: .25em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-image: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Custom Select Container */
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  background: #2c3e50;
+  border-radius: .25em;
+  overflow: hidden;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 1em;
+  bottom: 0;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Hover Effects */
+select:hover, button:hover {
+  background: #34495e;
+  color: #f39c12;
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+}
+
+h1 img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  background: #444;
+}
+
+.no-data-message {
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+/* Custom colors for weather details */
+.city-name {
+  color: #f39c12; /* Orange for city name */
+}
+
+.weather-condition {
+  color: #1abc9c; /* Teal for weather condition */
+}
+
+.temperature, .temp-max, .temp-min {
+  color: #e74c3c; /* Red for temperature */
+}
+
+.sea-level {
+  color: #3498db; /* Blue for sea level */
+}
+
+.wind {
+  color: #9b59b6; /* Purple for wind details */
+}
