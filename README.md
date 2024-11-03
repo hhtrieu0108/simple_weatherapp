@@ -1,4 +1,4 @@
-# Septup
+# 1. Setup
 
 1. Open terminal
 
@@ -17,7 +17,7 @@
     ```
 
 
-# Run
+# 2. Run
 
 1. Activate Virtual Environment (If activate already, don't need to do this)
     ```bash
