@@ -1,16 +1,14 @@
 # 1. Setup
 
-1. Open terminal
-    
-2. Type this command to create venv
+1. Create venv
     ```bash
     python -m venv venv
     ```
-3. Activate the venv
+2. Activate the venv
     ```bash
     venv\Scripts\activate
     ```
-4. Install the requirements.txt
+3. Install the requirements.txt
     ```bash
     pip install -r requirements.txt
     ```
