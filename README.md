@@ -1,8 +1,7 @@
 # 1. Setup
 
 1. Open terminal
-
-    ![terminal](images/terminal.png)
+    
 2. Type this command to create venv
     ```bash
     python -m venv venv
