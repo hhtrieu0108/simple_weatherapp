@@ -1,33 +1,30 @@
-# Cách làm
+# Septup
 
-## PHần này là trước khi cho chạy code (Có nghĩa là mình đang setup)
+1. Open terminal
 
-### 1. Tạo môi trường ảo
-- Mở terminal (nhớ chuyển qua CMD, nhìn ở góc trên bên phải). Nhìn hình minh họa
-![terminal](images/terminal.png)
-- Nhập dòng lệnh dưới vào terminal
-```bash
-python -m venv venv
-```
-- Sau đó nhập lệnh dưới để kích hoạt môi trường ảo
-```bash
-venv\Scripts\activate
-```
-- Sau đó cài dặt các thư viện cần thiết trong requirements.txt bằng lệnh dưới
-```bash
-pip install -r requirements.txt
-```
+    ![terminal](images/terminal.png)
+2. Type this command to create venv
+    ```bash
+    python -m venv venv
+    ```
+3. Activate the venv
+    ```bash
+    venv\Scripts\activate
+    ```
+4. Install the requirements.txt
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 
-### 2. Sau setup, chạy code
+# Run
 
-### Kích hoạt môi trường ảo
-- Bật terminal (Nhớ chuyển qua cmd)
-```bash
-venv\Scripts\activate
-```
+1. Activate Virtual Environment (If activate already, don't need to do this)
+    ```bash
+    venv\Scripts\activate
+    ```
 
-- Sau đó chạy file main.py
-```bash
-python main.py
-```
+2. Run this command
+    ```bash
+    python main.py
+    ```
